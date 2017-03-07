@@ -1,23 +1,39 @@
-<!doctype html>
+h1 {
+  text-align:center;
+  margin: 0 auto;
+}
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
+button {
+  background: none;
+  border: none;
+  font-size: 12;
+}
 
-  <title>Tic Tac Toe</title>
-  <meta name="description" content="Interactive Tic Tac Toe game">
-  <meta name="Sally Maki">
+.outer {
+  background-color: #336699;
+  box-shadow: inset -1px 1px 7px rgba(0,0,0,.2), inset 1px -1px 7px rgba(0,0,0,.2), 1px 12px 5px rgba(0,0,0,.4), 4px 3px 8px rgba(0,0,0,.4), 5px 10px 10px rgba(0,0,0,.2), -5px 10px 10px rgba(0,0,0,.4);
+  position: relative;
+  border-radius: 10px;
+  width: 500px;
+  height: 600px;
+  margin: 10% auto;
+  padding: 10px 10px 0;
+  text-align:center;
+}
 
-  <link rel="stylesheet" href="css/ticTacToe.css">
+.board {
+  background-color: black;
+  /*width: 400px;
+  height: 400px;*/
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <script src="js/ticTacToe.js"></script>
-  <![endif]-->
-</head>
-
-<body>
-  <div class = "outer">
-  </div>
-</body>
-</html>
+.game {
+  background-color: green;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
