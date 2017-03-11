@@ -7,8 +7,8 @@
   <title>Tic Tac Toe</title>
   <meta name="description" content="Interactive Tic Tac Toe game">
   <meta name="Sally Maki">
-  <script src="js/ticTacToe.js?version=2"></script>
-  <link rel="stylesheet" href="css/ticTacToe.css?version=12">
+  <script src="js/tictactoe.js?version=3"></script>
+  <link rel="stylesheet" href="css/tictactoe.css?version=13">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -22,14 +22,14 @@
 
     <div class="num-players">
       <p>Number of players:
-        <button id="one-player">One Player</button>
-        <button id ="two-player">Two Player</button>
+        <button onclick="numPlayers = 1">One Player</button>
+        <button onclick="numPlayers = 2">Two Player</button>
       </p>
     </div>
     <div class="choose-player">
       <p>Choose your letter:
-        <button>X</button>
-        <button>O</button>
+        <button onclick="player = 'X'">X</button>
+        <button onclick="player = 'O'">O</button>
       </p>
     </div>
     <button onclick="drawBoard()">Start</button> | <button class="reset">Reset</button>
@@ -38,5 +38,8 @@
     </div>
 
   </div>
+  <p>
+    <a href="index.html">Back to list of all games</a>
+  </p>
 </body>
 </html>

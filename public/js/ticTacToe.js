@@ -1,5 +1,7 @@
 var ticTacToe = {
-  winingCombos: [
+  numPlayers: 1,
+  player: 'X',
+  winCombos: [
     [1, 2, 3], // Horizontals
     [4, 5, 6],
     [7, 8, 9],

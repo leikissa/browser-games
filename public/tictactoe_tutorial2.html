@@ -1,0 +1,76 @@
+<html>
+
+<head>
+  <style>
+    .board {
+      display: flex;
+      width: 600px;
+      height: 600px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .square {
+      height: 200px;
+      width: 200px;
+      box-sizing: border-box;
+      border: 5px solid black;
+      font-size: 5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .square:hover {
+      background-color: #80cd92;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Play Tic Tac Toe!</h1>
+  <div class="render-target">
+  </div>
+
+  <p>
+    <a href="index.html">Back to list of all games</a>
+  </p>
+
+  <script>
+    var gameState = {
+      playerOneSymbol: "X",
+      playerTwoSymbol: "O",
+      currentTurn: "X",
+      board: [
+        "", "", "", "", "", "", "", "", ""
+      ]
+    }
+
+    function render(state) {
+      boardHTML = "<div class ='board'>"
+      for (let i = 0; i < 9; i++) {
+        boardHTML += "<div class='square' id='" + i + "'>" + state.board[i] + "</div>"
+      }
+      boardHTML += "</div>"
+
+      document.querySelector(".render-target").innerHTML = boardHTML
+    }
+
+    render(gameState)
+
+    var board = document.querySelector('.board');
+    board.addEventListener('click', function(e) {
+      var squareIndex = parseInt(e.target.id, 10)
+      console.log(squareIndex)
+      gameState.board[squareIndex] = gameState.currentTurn
+      gameState.currentTurn = gameState.currentTurn === gameState.playerOneSymbol ? gameState.playerTwoSymbol : gameState.playerOneSymbol
+      //debugger
+      render(gameState)
+
+    });
+  </script>
+</body>
+
+</html>
