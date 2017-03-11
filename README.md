@@ -23,7 +23,7 @@ Available on:
 
 Then open `http://localhost:4321/` in your browser of choice and play away!
 
-Project #ablaze-gala
+Project #ablaze-galah
 
 Team members:
 Sally Maki
