@@ -6,14 +6,12 @@
   <meta charset="utf-8">
 
   <title>Tic Tac Toe</title>
-  <meta name="description" content="FreeCodeCamp Tic Tac Toe Solution">
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="js/tictactoe_solution.js"></script>
+  <meta name="description" content="Interactive Tic Tac Toe game">
+  <meta name="Sally Maki">
 
   <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/tictactoe_solution.css">
+  <link rel="stylesheet" href="css/tictactoe_solution.css?version=25">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -22,12 +20,12 @@
 </head>
 
 <body>
-
+  <h1>Play Tic Tac Toe!</h1>
   <div class="outer-container">
     <button class="hard-reset">Reset All</button>
     <p class="score-1"><span class="points"></span><span class="name"></span></p>
-    <i class="points-divider">&#124;</i>
-    <p class="score-2"><span class="points"></span><span class="name"></span></p>
+    <i class = "points-divider">&#124;</i>
+    <p class="score-2"><span class="points"></span>
     <div class="player-one-turn">
       <p></p>
     </div>
@@ -36,25 +34,25 @@
     </div>
     <div class="board-container">
       <div class="game-starter">
-        <p>Would you like to be X or O?</p>
+        <p>Choose your letter:</p>
         <button class="choose-x">X</button>
         <button class="choose-o">O</button>
         <button class="back-button"><i class="fa fa-arrow-left"></i> Back</button>
       </div>
       <div class="game-choice">
-        <p>How do you want to play?</p>
-        <button class="one-player">One Player</button>
-        <button class="two-player">Two Player</button>
+        <p>How many players?</p>
+        <button class="one-player">One</button>
+        <button class="two-player">Two</button>
       </div>
       <div class="game-board">
         <div class="draw-message">
           <p>It was a draw..</p>
         </div>
         <div class="lose-message">
-          <p>Uh oh, you lost..</p>
+          <p>Un oh, you lost.. <i class="glyphicon glyphicon-thumbs-down"></i></p>
         </div>
         <div class="win-message">
-          <p>You Won!!! :)</p>
+          <p>You Won!!! <i class="glyphicon glyphicon-thumbs-up"></i></p>
         </div>
         <canvas id="myCanvas"></canvas>
         <ul class="boxes">
@@ -66,6 +64,10 @@
   <p>
     <a href="index.html">Back to list of all games</a>
   </p>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/tictactoe_reproduction.js?version=25"></script>
+
 </body>
 
 </html>
